@@ -1,0 +1,7 @@
+{% include 'header' %}
+
+import LightRoute
+
+class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+    weak var transitionHandler: TransitionHandler!
+}
