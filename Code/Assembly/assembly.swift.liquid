@@ -30,7 +30,9 @@ final class {{ module_info.name }}Assembly: Assembly {
         }
 
         container.storyboardInitCompleted({{ module_info.name }}ViewController.self) { r, viewController in
-            viewController.output = r.resolve({{ module_info.name }}Presenter.self, argument: viewController)
+            let presenter = r.resolve({{ module_info.name }}Presenter.self, argument: viewController)
+            viewController.output = presenter
+            viewController.moduleInput = presenter
         }
     }
 }

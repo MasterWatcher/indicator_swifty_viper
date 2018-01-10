@@ -1,7 +1,7 @@
 {% include 'header' %}
 
-import LightRoute
+import ViperMcFlurry
 
 class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
-    weak var transitionHandler: TransitionHandler!
+    weak var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
 }
